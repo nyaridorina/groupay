@@ -17,8 +17,8 @@ def create_app():
     cors.init_app(app)
 
     # Import and register blueprints
-    from backend.routes.project_routes import project_bp
-    from backend.routes.expense_routes import expense_bp
+    from routes.project_routes import project_bp
+    from routes.expense_routes import expense_bp
 
     app.register_blueprint(project_bp, url_prefix="/api/projects")
     app.register_blueprint(expense_bp, url_prefix="/api/expenses")
