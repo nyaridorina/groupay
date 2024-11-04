@@ -1,11 +1,10 @@
-# routes/project_routes.py
-from flask import Blueprint
-from backend import db  # Corrected the import path to avoid circular dependency
-from backend.models.project import Project
+from flask import Blueprint, jsonify
+from backend import db  # db is correctly imported from backend
+from models.project import Project  # Corrected the import path for Project model
 
 project_bp = Blueprint('projects', __name__)
 
 @project_bp.route("/", methods=["GET"])
 def get_projects():
-    # Your logic to get projects
-    return "List of projects"
+    projects = Project.query.all()
+    return jsonify([project.name for project in projects])
