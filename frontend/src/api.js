@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://your-backend-url.onrender.com/api",
+  baseURL: "https://groupay.onrender.com",
 });
 
 export const fetchProjects = () => api.get("/projects");
