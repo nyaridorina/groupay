@@ -2,7 +2,7 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS
-from config import Config
+from backend.config import Config  # Corrected the import path
 
 # Initialize extensions
 db = SQLAlchemy()
@@ -17,8 +17,8 @@ def create_app():
     cors.init_app(app)
     
     # Import and register blueprints
-    from .routes.project_routes import project_bp
-    from .routes.expense_routes import expense_bp
+    from backend.routes.project_routes import project_bp  # Corrected the import path
+    from backend.routes.expense_routes import expense_bp  # Corrected the import path
     
     app.register_blueprint(project_bp, url_prefix="/api/projects")
     app.register_blueprint(expense_bp, url_prefix="/api/expenses")
