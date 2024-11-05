@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { addExpense } from "../api";
+import { addExpense } from "../api";  // Ensure correct import path
 
 function CurrencyConverter({ projectId }) {
   const [amount, setAmount] = useState("");
