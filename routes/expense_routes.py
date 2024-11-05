@@ -1,7 +1,7 @@
 from flask import Blueprint, request, jsonify
 from models.expense import Expense
 from services.currency_converter import convert_currency
-from app import db
+from backend import db  # Ensure correct import
 
 expense_bp = Blueprint("expense_bp", __name__)
 
