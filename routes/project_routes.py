@@ -1,6 +1,6 @@
 from flask import Blueprint, jsonify
-from backend import db  # db is correctly imported from backend
-from models.project import Project  # Corrected the import path for Project model
+from backend import db  # Ensure correct import
+from models.project import Project
 
 project_bp = Blueprint('projects', __name__)
 
