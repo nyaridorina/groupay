@@ -1,0 +1,43 @@
+{
+  "name": "groupay-frontend",
+  "version": "1.0.0",
+  "description": "Frontend for the Groupay application",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lint": "eslint src/",
+    "lint:fix": "eslint src/ --fix",
+    "format": "prettier --write \"src/**/*.{js,jsx,css,scss}\""
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.4.2",
+    "axios": "^1.2.0",                  // for making API requests
+    "styled-components": "^5.3.5",      // for styling components
+    "dotenv": "^16.0.0"                 // for environment variables
+  },
+  "devDependencies": {
+    "eslint": "^8.18.0",                // linter for JS
+    "eslint-config-prettier": "^8.5.0", // for prettier-eslint integration
+    "eslint-plugin-react": "^7.31.0",   // linter for React
+    "prettier": "^2.7.1"                // code formatter
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "author": "Your Name",
+  "license": "MIT"
+}
